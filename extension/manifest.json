@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Productivity Extension",
+    "version": "1.0.0",
+    "description": "Eliminate distractions by blocking websites until work is done",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+}
