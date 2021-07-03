@@ -3,8 +3,18 @@
     "name": "Productivity Extension",
     "version": "1.0.0",
     "description": "Eliminate distractions by blocking websites until work is done",
-    "browser_action": {
-        "default_popup": "popup.html"
+    "background": {
+        "service_worker": "background.js"
     },
-    "permissions": ["activeTab"]
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "balls"
+    },
+    "permissions": ["activeTab", "storage"]
 }
