@@ -29,5 +29,10 @@ const addWebsite = () => {
 
 };
 
-document.getElementById("btn").addEventListener("click", addWebsite);
-
+document.getElementById("addBtn").addEventListener("click", addWebsite);
+document.getElementById("cdBtn").addEventListener("click", () => {
+    window.location.href = "countdown.html";
+});
+document.getElementById("timerBtn").addEventListener("click", () => {
+    window.location.href = "timer.html";
+});
