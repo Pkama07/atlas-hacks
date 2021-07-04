@@ -15,11 +15,12 @@
         }
         .text2 {
             font-family: 'Quicksand', sans-serif;
+            color: #007BFF;
         }
         .text3 {
             font-family: 'Quicksand', sans-serif;
-            font-size: 30px;
             color: #007BFF;
+            font-size: 30px;
         }
         .btn {
             border: none;
@@ -87,31 +88,21 @@
 
         }
 
-
     </style>
 
 </head>
 <body>
     <div class="container" style="max-height: 200px">
-        <span class="text3">progresso</span>
+        <button id="title" class="btn"><span class="text3">progresso</span></button>
         <hr>
-        <button id="timerBtn" class="btn btn-outline-primary"><span class="text2">timer</span></button>
-        <button id="websites" class="btn btn-outline-primary"><span class="text2">sites</span></button>
-        <button id="insights" class="btn btn-outline-primary"><span class="text2">insights</span></button>
-        <br><br>
-        <input type="text" id="website_input" placeholder="add new task" style="line-height: 1.9em">
-        <button id="addBtn" class="btn btn-outline-primary"><i class="fas fa-plus"></i></button>
-        <br><br>
-        <div class="wrapper">
-            <ul id="myList" class="todoList">
-            </ul>
-        </div>
-            <div class="footer">
-                <button id="clearBtn" class="btn btn-outline-primary">clear</button>
-            </div>
-
+        <h5>total number of tasks completed</h5>
+        <h5 class="text2" id="totalTasks"></h5>
+        <h5>total time spent working</h5>
+        <h5 class="text2" id="totalTime"></h5>
+        <h5>percentage of tasks completed</h5>
+        <h5 class="text2" id="percTask"></h5>
         <br>
     </div>
 </body>
-<script src="scripts/popup.js"></script>
+<script src="scripts/insights.js"></script>
 </html>

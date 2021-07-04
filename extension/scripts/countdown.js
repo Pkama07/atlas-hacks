@@ -1,4 +1,4 @@
-document.getElementById("homepageBtn").addEventListener("click", () => {
+document.getElementById("title").addEventListener("click", () => {
     window.location.href = "popup.html";
 });
 
@@ -7,6 +7,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
         minutes = parseInt(document.getElementById("minutes").value),
         seconds = parseInt(document.getElementById("seconds").value);
     var endTime = seconds * 1000 + minutes * 60000 + hours * 3600000;
-    chrome.storage.local.set({"hours": hours, "minutes": minutes, "seconds": seconds, "endTime": Date.now() + endTime});
+    chrome.storage.local.set({"hours": hours, "minutes": minutes, "seconds": seconds, "endTime": Date.now() + endTime, "isTicking": true});
+
     window.location.href = "timer.html";
 });
